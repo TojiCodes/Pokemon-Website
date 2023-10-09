@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -10,43 +10,56 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
+    font-family: 'Pokemon Solid', sans-serif;
 }
 
 .card-section {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center vertically */
+    align-items: center;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
 }
 
 .card {
     width: 300px;
+    height: 480px; /* Set your preferred fixed height for the card */
     background-color: white;
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card img {
     width: 100%;
+    height: 70%; /* Set your preferred height for the image as a percentage of the card height */
+    object-fit: cover;
     border-bottom: 1px solid #ddd;
 }
 
-.card h3 {
+.card-content {
     padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .card p {
-    padding: 0 10px;
+    flex-grow: 1;
+    overflow: hidden;
     text-align: center;
 }
 
 .card button {
-    display: block;
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -63,11 +76,11 @@ header {
 /* Adjustments for larger card sections and 3 cards per row */
 @media (min-width: 768px) {
     .card-section {
-        max-width: 900px; /* Set your preferred max-width */
+        max-width: 900px;
     }
 
     .card {
-        width: calc(33.33% - 20px); /* 20px for margins */
+        width: calc(33.33% - 20px);
     }
 }
 
@@ -78,4 +91,5 @@ footer {
     padding: 1em;
     bottom: 0;
     width: 100%;
+    font-family: 'Pokemon Solid', sans-serif;
 }
